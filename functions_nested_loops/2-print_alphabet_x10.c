@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_alphabet_x10 - imprime alphabet 10x en minuscule suivi d un saut de ligne
+* print_alphabet_x10 - imprime alphabet 10x en minuscule suivi saut ligne
 */
 void print_alphabet_x10(void)
 {
