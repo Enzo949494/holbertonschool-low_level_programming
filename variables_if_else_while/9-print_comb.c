@@ -9,24 +9,22 @@
 */
 
 
+
 int main(void)
 {
-int i, j;
-for (i = 0; i < 10; i++)
-{
-j = i;
-while (j < 10)
-{
-putchar(j + '0');
-if (i != 8 || j != 9)
-{
-putchar(',');
-putchar(' ');
-}
-j++;
-}
-}
-putchar('\n');
+    int n = 0;
 
-return (0);
+    while (n <= 9)
+    {
+        putchar(n + '0');
+        if (n != 9)
+        {
+            putchar(',');
+            putchar(' ');
+        }
+        n++;
+    }
+    putchar('\n');
+
+    return (0);
 }
