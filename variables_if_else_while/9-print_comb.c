@@ -1,4 +1,7 @@
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 
 /**
 * main - affiche combinaison possible nombres a 1 chiffres
