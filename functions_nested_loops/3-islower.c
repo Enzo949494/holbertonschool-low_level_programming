@@ -2,7 +2,7 @@
 
 /**
 * _islower - affiche caractere en minuscule
-* c: caractere
+* @c: caractere
 *
 * Return: 1 si c est minuscule , sinon 0
 */
