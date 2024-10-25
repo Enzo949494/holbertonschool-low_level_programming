@@ -2,7 +2,9 @@
 
 /**
 * _islower - affiche caractere en minuscule
-* Return: 0
+* c: caractere
+*
+* Return: 1 si c est minuscule , sinon 0
 */
 
 int _islower(int c)
