@@ -3,7 +3,7 @@
 
 /**
 * _puts - imprime une chaine suivi saut de ligne sur stdout
-*@str: The string to be printed
+*@str: chaine a imprimer
 */
 void _puts(char *str)
 {
