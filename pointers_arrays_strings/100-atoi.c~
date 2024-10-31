@@ -1,11 +1,9 @@
 #include "main.h"
-#include <limits.h>
-#include <stdio.>
 
 /**
 * _atoi - convertit une chaine en entier
-*@s: chaine a convertir
-* Return: entier convertit
+* @s: chaine a convertir
+* Retour: entier convertit
 */
 
 int _atoi(char *s)
