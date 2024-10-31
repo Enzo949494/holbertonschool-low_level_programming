@@ -1,6 +1,6 @@
 #include "main.h"
 #include <limits.h>
-#include <stdio.>
+#include <stdio.h>
 
 /**
 * _atoi - convertit une chaine en entier
