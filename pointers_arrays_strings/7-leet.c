@@ -10,10 +10,10 @@ char *leet(char *str)
 {
 int i, j;
 char leet_letters[] = "aAeEoOtTlL";
-char lett_numbers[] = "4433007711";
+char leet_numbers[] = "4433007711";
 for (i = 0; str[i] != '\0'; i++)
 {
-for (j = 0; lett_letters[j] != '\0'; j++)
+for (j = 0; leet_letters[j] != '\0'; j++)
 {
 if (str[i] == leet_letters[j])
 {
