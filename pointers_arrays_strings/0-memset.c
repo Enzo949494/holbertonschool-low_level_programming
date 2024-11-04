@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _memset - remplit memoire avec octet constant
@@ -7,7 +6,7 @@
  * @b: octet constant a placer
  * @n: nombre octet a remplir
  * Return: pointeur vers zone memoire s
- * /
+ */
 
 char *_memset(char *s, char b, unsigned int n)
 {
