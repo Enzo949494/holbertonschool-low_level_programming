@@ -4,7 +4,7 @@
  * _strspn - donne longueur prefixe sous chaine
  * @s: chaine a scanner
  * @accept: chaine avec cara a verif
- * 
+ * Description: donne longueur prefixe sous chaine
  * Return: resultat 
  */
 
