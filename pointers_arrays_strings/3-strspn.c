@@ -5,7 +5,7 @@
  * @s: chaine a scanner
  * @accept: chaine avec cara a verif
  * Description: donne longueur prefixe sous chaine
- * Return: resultat 
+ * Return: resultat
  */
 
 unsigned int _strspn(char *s, char *accept)
