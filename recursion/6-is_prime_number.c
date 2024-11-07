@@ -12,22 +12,23 @@ int is_prime_helper(int n, int i);
 int is_prime_number(int n)
 {
 	if (n <= 1)
-	return 0;
-    return is_prime_helper(n, 2);
+	return (0);
+	return (is_prime_helper(n, 2));
 }
 
 /**
- * is_prime_helper - verfie si nombre premeir
+ * is_prime_helper - verfie si nombre premier
  * @n: nombre a verif
  * @i: diviseur a verifier
- * return: 1 si premier, sinon 0
+ *
+ * Return: 1 si premier, sinon 0
  */
 
 int is_prime_helper(int n, int i)
 {
 	if (i * i > n)
-	return 1;
+	return (1);
 	if (n % i == 0)
-	return 0;
-	return is_prime_helper(n, i + 1);
+	return (0);
+	return (is_prime_helper(n, i + 1));
 }
