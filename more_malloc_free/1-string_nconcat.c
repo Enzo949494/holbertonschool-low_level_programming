@@ -6,6 +6,7 @@
  * @s1: 1ere chaine
  * @s2: 2eme chaine
  * @n: nombres octets de s2 a cctn
+ * Return: pointeur vers new espace mem, NULL si erreur
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
