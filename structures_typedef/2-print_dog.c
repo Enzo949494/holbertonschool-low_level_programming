@@ -4,7 +4,7 @@
 /**
  * print_dog - imprime info struct dog
  * @d: pointeur vers struct dog a imprimer
- * 
+ *
  * Description: fonction imprime infos chien
  * si elements NULL, imprime nil
  * si d est NULL, imprime rien
