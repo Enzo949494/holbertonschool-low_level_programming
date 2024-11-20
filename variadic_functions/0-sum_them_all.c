@@ -5,6 +5,7 @@
  * sum_them_all - retourne somme de tout parametres
  * @n: nombre de parametres
  * @...: nombre variables de parametres a additionner
+ * Return: somme de tout parametres,ou 0 si n == 0
  */
 
 int sum_them_all(const unsigned int n, ...)
