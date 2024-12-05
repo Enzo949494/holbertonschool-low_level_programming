@@ -14,6 +14,8 @@ int append_text_to_file(const char *filename, char *text_content);
 int close_file_free_buff(int file_descriptor, char *buff, int returnal);
 int close_file_no_free(int file_descriptor, int returnal);
 int main_copy(int argc, char *argv[]);
+int *open_files(char *src, char *dest);
+void write_to_file(int fd_to, char *buffer, ssize_t nwrite);
 
 #define BUFFER_SIZE 1024
 
