@@ -53,8 +53,20 @@ int main_copy(int argc, char *argv[])
         exit(99);
     }
 
-    while ((nread = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+    while (1)
     {
+        nread = read(fd_from, buffer, BUFFER_SIZE);
+        if (nread == -1)
+        {
+            dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+            close_file_no_free(fd_from, 98);
+            close_file_no_free(fd_to, 98);
+            exit(98);
+        }
+        
+        if (nread == 0)
+            break;
+
         if (write(fd_to, buffer, nread) != nread)
         {
             dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -62,14 +74,6 @@ int main_copy(int argc, char *argv[])
             close_file_no_free(fd_to, 99);
             exit(99);
         }
-    }
-
-    if (nread == -1)
-    {
-        dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-        close_file_no_free(fd_from, 98);
-        close_file_no_free(fd_to, 98);
-        exit(98);
     }
 
     close_file_no_free(fd_from, 0);
