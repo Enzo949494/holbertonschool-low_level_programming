@@ -16,6 +16,8 @@ int close_file_no_free(int file_descriptor, int returnal);
 int main_copy(int argc, char *argv[]);
 int *open_files(char *src, char *dest);
 void write_to_file(int fd_to, char *buffer, ssize_t nwrite);
+void error_exit(int code, const char *message, const char *arg);
+int main(int argc, char *argv[]);
 
 #define BUFFER_SIZE 1024
 

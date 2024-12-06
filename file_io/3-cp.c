@@ -1,25 +1,6 @@
 #include "main.h"
 
-/**
- * close_file_free_buff - Closes a file descriptor and frees the buffer.
- * @file_descriptor: The file descriptor to close.
- * @buff: The buffer to free.
- * @returnal: The return value to return.
- *
- * Return: The return value passed in.
- */
-int close_file_free_buff(int file_descriptor, char *buff, int returnal)
-{
-    if (buff != NULL)
-        free(buff);
-
-    if (close(file_descriptor) == -1)
-    {
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor);
-        exit(100);
-    }
-    return (returnal);
-}
+#define BUFFER_SIZE 1024
 
 /**
  * close_file_no_free - Closes a file descriptor without freeing the buffer.
@@ -57,7 +38,6 @@ int main_copy(int argc, char *argv[])
         exit(97);
     }
 
-    
     fd_from = open(argv[1], O_RDONLY);
     if (fd_from == -1)
     {
@@ -65,7 +45,6 @@ int main_copy(int argc, char *argv[])
         exit(98);
     }
 
-    
     fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_to == -1)
     {
@@ -74,7 +53,6 @@ int main_copy(int argc, char *argv[])
         exit(99);
     }
 
-    
     while ((nread = read(fd_from, buffer, BUFFER_SIZE)) > 0)
     {
         if (write(fd_to, buffer, nread) != nread)
@@ -94,7 +72,6 @@ int main_copy(int argc, char *argv[])
         exit(98);
     }
 
-    
     close_file_no_free(fd_from, 0);
     close_file_no_free(fd_to, 0);
 
