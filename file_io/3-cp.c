@@ -2,15 +2,14 @@
 
 	#define BUFFER_SIZE 1024
 
-	/**
-	 * close_file_no_free - Closes a file descriptor without freeing the buffer.
-	 * @file_descriptor: The file descriptor to close.
-	 * @returnal: The return value to return.
-	 *
-	 * Description: this fonction is explain 2 line up.
-	 *
-	 * Return: The return value passed in.
-	 */
+/**
+ * close_file_no_free - Closes a file descriptor without freeing the buffer
+ * @file_descriptor: The file descriptor to close
+ * @returnal: The return value to return
+ *
+ * Return: The return value passed in
+ */
+
 	int close_file_no_free(int file_descriptor, int returnal)
 	{
 	if (close(file_descriptor) == -1)
@@ -21,15 +20,16 @@
 	return (returnal);
 	}
 
-	/**
-	 * main_copy - Copies the content of a file to another file.
-	 * @argc: The number of command line arguments.
-	 * @argv: The command line arguments.
-	 *
-	 * Description: this function is explain 2 line up.
-	 *
-	 * Return: 0 on success.
-	 */
+/**
+ * main_copy - Copies the content of a file to another file.
+ * @argc: The number of command line arguments.
+ * @argv: The command line arguments.
+ *
+ * Description: this function is explain 2 line up.
+ *
+ * Return: 0 on success.
+ */
+
 	int main_copy(int argc, char *argv[])
 	{
 	int fd_from, fd_to;
@@ -76,13 +76,15 @@
 	return (0);
 	}
 
-	/**
-	 * main - Entry point of the program.
-	 *
-	 * Descrition: Entry point of a programme, 1st fonction execute when you start
-	 * Return: Always returns 0 on success.
-	 *
-	 */
+/**
+ * main - Entry point of the program.
+ *@argc: The number of command-line arguments
+ *@argv: An array of command-line argument strings
+ * Description: Entry point of a programme,1st fonction execute when you start.
+ *
+ * Return: Always returns 0 on success.
+ *
+ */
 	int main(int argc, char *argv[])
 	{
 	return (main_copy(argc, argv));
