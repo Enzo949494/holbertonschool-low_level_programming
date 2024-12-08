@@ -54,19 +54,8 @@
 		close_file_no_free(fd_from, 99);
 		exit(99);
 	}
-	while (1)
+	while ((nread = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
-		nread = read(fd_from, buffer, BUFFER_SIZE);
-		if (nread == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			close_file_no_free(fd_from, 98);
-			close_file_no_free(fd_to, 98);
-			exit(98);
-		}
-		if (nread == 0)
-			break;
-
 		if (write(fd_to, buffer, nread) != nread)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -75,7 +64,13 @@
 			exit(99);
 		}
 	}
-
+	if (nread == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		close_file_no_free(fd_from, 98);
+		close_file_no_free(fd_to, 98);
+		exit(98);
+	}
 	close_file_no_free(fd_from, 0);
 	close_file_no_free(fd_to, 0);
 	return (0);
